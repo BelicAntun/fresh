@@ -13,7 +13,7 @@ export function Hero({
     <div className="bg-hero bg-cover bg-no-repeat bg-center">
       <div
         className={clsx(
-          "bg-black bg-opacity-40 flex items-center justify-center",
+          "bg-slate-950 bg-opacity-50 flex items-center justify-center",
           { "h-[600px]": !shrink, "py-40": shrink }
         )}
       >
@@ -22,7 +22,7 @@ export function Hero({
           <h1 className="text-4xl sm:text-6xl font-bold">{title}</h1>
           {showLink && (
             <Link
-              className="border border-yellow-500 py-4 px-8 uppercase tracking-[2px] text-sm hover:bg-yellow-500 hover:text-white transition-colors self-center rounded-sm"
+              className="border border-blue-500 py-4 px-8 uppercase tracking-[2px] text-sm hover:bg-blue-500 hover:text-white transition-colors self-center rounded-lg"
               href={linkTo}
               scroll={false}
             >

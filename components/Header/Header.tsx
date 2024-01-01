@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 import { MdMenu, MdClose } from "react-icons/md";
 
 const menuItemClass =
-  "relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-yellow-500 hover:after:w-full after:transition-all";
+  "relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-blue-500 hover:after:w-full after:transition-all";
 const mobileMenuItemClass = "p-4 w-full text-center";
 
 export function Header() {
@@ -34,11 +34,12 @@ export function Header() {
       <div
         className={clsx(
           "fixed top-0 left-0 w-full transition-colors duration-500 z-40",
-          { "bg-white drop-shadow-md": scrollYPosition > 50 }
+          { "bg-white drop-shadow-md text-blue-500": scrollYPosition > 50 },
+          { "text-white": scrollYPosition < 50 }
         )}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-4 text-yellow-500">
+          <div className="flex items-center justify-between py-4 ">
             <Link
               href="/"
               className="text-3xl font-bold uppercase"
@@ -89,7 +90,7 @@ export function Header() {
               </Link>
             </nav>
             <button
-              className="text-2xl h-10 w-10 border border-transparent hover:border-yellow-500 hover:text-white flex md:hidden items-center justify-center transition-colors"
+              className="text-2xl h-10 w-10 border border-transparent hover:border-blue-500 hover:text-white flex md:hidden items-center justify-center transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <MdMenu />
@@ -100,7 +101,7 @@ export function Header() {
 
       <div
         className={clsx(
-          "fixed z-50 top-0 w-72 h-full overflow-y-auto bg-yellow-900 transition-all duration-500 md:hidden",
+          "fixed z-50 top-0 w-72 h-full overflow-y-auto bg-blue-900 transition-all duration-500 md:hidden",
           { "right-0": isMobileMenuOpen, "-right-72": !isMobileMenuOpen }
         )}
       >
@@ -111,12 +112,12 @@ export function Header() {
           >
             <MdClose />
           </button>
-          <nav className="flex flex-col items-center text-white divide-y divide-yellow-800 border-t border-yellow-800">
+          <nav className="flex flex-col items-center text-white divide-y divide-blue-800 border-t border-blue-800">
             <Link
               href="/"
               className={twMerge(
                 mobileMenuItemClass,
-                `${pathname === "/" ? "text-yellow-500" : ""}`
+                `${pathname === "/" ? "text-blue-500" : ""}`
               )}
               scroll={false}
             >
@@ -126,7 +127,7 @@ export function Header() {
               href="/about"
               className={twMerge(
                 mobileMenuItemClass,
-                `${pathname === "/about" ? "text-yellow-500" : ""}`
+                `${pathname === "/about" ? "text-blue-500" : ""}`
               )}
               scroll={false}
             >
@@ -136,7 +137,7 @@ export function Header() {
               href="/products"
               className={twMerge(
                 mobileMenuItemClass,
-                `${pathname === "/products" ? "text-yellow-500" : ""}`
+                `${pathname === "/products" ? "text-blue-500" : ""}`
               )}
               scroll={false}
             >
@@ -146,7 +147,7 @@ export function Header() {
               href="/contact"
               className={twMerge(
                 mobileMenuItemClass,
-                `${pathname === "/contact" ? "text-yellow-500" : ""}`
+                `${pathname === "/contact" ? "text-blue-500" : ""}`
               )}
               scroll={false}
             >
