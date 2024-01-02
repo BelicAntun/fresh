@@ -79,14 +79,14 @@ export function Header() {
                 Products
               </Link>
               <Link
-                href="/contact"
+                href="/kontakt"
                 className={twMerge(
                   menuItemClass,
-                  `${pathname === "/contact" ? "after:w-full" : ""}`
+                  `${pathname === "/kontakt" ? "after:w-full" : ""}`
                 )}
                 scroll={false}
               >
-                Contact
+                Kontakt
               </Link>
             </nav>
             <button

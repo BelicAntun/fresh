@@ -8,8 +8,9 @@ export default function Home() {
         title="Fresh"
         subtitle="Kemijska praonica tepiha"
         showLink
-        linkText="Contact us"
-        linkTo="/contact"
+        linkText="Kontaktirajte nas"
+        linkTo="/kontakt"
+        section="hero"
       />
     </MainLayout>
   );

@@ -8,9 +8,15 @@ export function Hero({
   showLink,
   linkText,
   linkTo,
+  section,
 }: Props) {
   return (
-    <div className="bg-hero bg-cover bg-no-repeat bg-center">
+    <div
+      className={clsx("bg-hero bg-cover bg-no-repeat bg-center", {
+        "bg-hero": section === "hero",
+        "bg-kontakt": section === "kontakt",
+      })}
+    >
       <div
         className={clsx(
           "bg-slate-950 bg-opacity-50 flex items-center justify-center",
@@ -39,6 +45,7 @@ type Props = {
   title: string;
   subtitle?: string;
   shrink?: boolean;
+  section: string;
 } & (
   | {
       showLink: true;

@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         hero: "url('/assets/images/hero-img.png')",
+        kontakt: "url('/assets/images/kontakt.jpg')",
       },
     },
   },
