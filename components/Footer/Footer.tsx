@@ -15,20 +15,28 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-100 pt-8 flex flex-wrap items-center justify-center text-sm gap-4">
-          <p>&copy; Copyright {new Date().getFullYear()}</p>
+          <p>
+            &copy;{new Date().getFullYear()} Fresh, obrt za čišćenje. Sva prava
+            pridržana.
+          </p>
+
           <Link
-            href="/terms"
+            href="/pravila-privatnosti"
             className="text-gray-400 underline hover:no-underline"
-            scroll={false}
           >
-            Terms &amp; Conditions
+            Pravila Privatnosti
           </Link>
           <Link
-            href="/privacy-policy"
+            href="/politika-kolacica"
             className="text-gray-400 underline hover:no-underline"
-            scroll={false}
           >
-            Privacy Policy
+            Politika Kolačića
+          </Link>
+          <Link
+            href="/uvjeti-koristenja"
+            className="text-gray-400 underline hover:no-underline"
+          >
+            Uvjeti korištenja
           </Link>
         </div>
       </div>
